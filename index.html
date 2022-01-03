@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
+		<link rel="icon" type="image/png" href="./img/favicon.png" />
+
+		<title>Carty | Best car dealership in Europe</title>
+		<link rel="stylesheet" href="./styles.css" />
+		<script defer src="./index.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
+		
+	</head>
+	<body>
+		<header class="header">
+			<!-- BEM - sposob pisania klas w web devie. B - block, E - element, M - modofier -->
+			<div class="header__top">
+				<div class="logo">
+					<span class="logo__name"
+						>Car<span class="text--highlighted">ty</span></span
+					>
+					<span class="logo__motto">Come,buy,drive!</span>
+				</div>
+				<nav class="navbar">
+					<ul class="navbar__list">
+						<li class="navbar__link" data-goForth="123" data-goTo="aboutUs">About</li>
+						<li class="navbar__link" data-goTo="OursCar">Explore</li>
+						<li class="navbar__link" data-goTo="footer">Contact</li>
+						
+					</ul>
+				</nav>
+			</div>
+			<div class="header__bottom">
+				<div class="header__bottom--left">
+					<h1 class="heading__primary">
+						Your reliable car <br />
+						dealership in Europe
+					</h1>
+					<a href="#" data-goTo="aboutUs" class="btn" id="learnMoreBtn">Learn more</a>
+				</div>
+				<div class="header__bottom--right">
+					<img src="./img/photo__header.svg" alt="Woman sitting on a car" />
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="aboutUs">
+				<h2 class="heading__secondary">Who we are</h2>
+				<p class="aboutUs__text">
+					Carty is a car selling company founded in 2016. Our main goal is to
+					provide people with reliable second-hand cars that are far cheeper
+					than in an original dealership. We posses over 50 parking lots in
+					different countries of Europe. All of them are filled with hundreds of
+					cars that are waiting for a new owner. You can find both cheap and
+					expensive luxury cars
+				</p>
+				<div class="aboutUs__strongSides">
+					<div class="strongSide">
+						<svg class="strongSide__icon">
+							<use xlink:href="./img/sprite.svg#icon-dollar" />
+						</svg>
+						<h3 class="heading__tertiary--small">Affordable prices</h3>
+						<p class="strongSide__text">We have cars for every budget</p>
+					</div>
+					<div class="strongSide">
+						<svg class="strongSide__icon">
+							<use xlink:href="./img/sprite.svg#icon-car" />
+						</svg>
+						<h3 class="heading__tertiary--small">Cars for every taste</h3>
+						<p class="strongSide__text">
+							Regardless of your demands, we have a car just for you!
+						</p>
+					</div>
+					<div class="strongSide">
+						<svg class="strongSide__icon">
+							<use xlink:href="./img/sprite.svg#icon-user" />
+						</svg>
+						<h3 class="heading__tertiary--small">Security</h3>
+						<p class="strongSide__text">
+							We have thousands of happy customers and reviews from them
+						</p>
+					</div>
+					<div class="strongSide">
+						<svg class="strongSide__icon">
+							<use xlink:href="./img/sprite.svg#icon-heart" />
+						</svg>
+						<h3 class="heading__tertiary--small">Care</h3>
+						<p class="strongSide__text">
+							Carty cares deeply about its customers, Being our client, you get
+							treated in the best way possible
+						</p>
+					</div>					
+			</section>
+			
+			<section class="OursCar">
+				<h2 class="heading__secondary">Take a look at some of our cars</h2>
+				<div class="OursCar__cars">
+					<!-- <div class="car">
+						<div class="car__left">Toyota Avensis</div>
+						<div class="car__right">
+							<ul class="car__description">
+								<li>Year: 2016</li>
+								<li>Mileage: 123 000km</li>
+								<li>Petrol consumption: 5l/100km</li>
+								<li>Color: Black</li>
+							</ul>
+						</div>
+					</div>
+					 -->
+					 
+				</div>
+				<button class="btn" id="loadCars">Load More</button>
+			</section>
+			<section class="charts">
+				<div class="dreamCar">
+					<h2 class="heading__secondary">Choose the car of your dream</h1>
+					<p class="charts__text">What car to choose? -It may be one of the hardest 
+						questions in Your life. You want a cheap car that doesn't require a 
+						fortune on petrol but at the same time it must be reliable and look nice.
+						Our consultants will help You find the very car you seek
+					</p>
+				</div>
+				<div class="chart1__intro">
+					<h3 class="heading__tertiary--big">Audi, BMW or maybe Toyota?</h3>
+					<p class="charts__text">According to scientifical surveys, make of the car plays
+					an important role while choosing your new steel horse. The next chart is based on our 
+					last month's sales of most popular car makes
+					</p>
+				</div>
+				<div class="chart1__container">
+					<canvas id="chart1"></canvas>
+				</div>
+				<div class="chart2__intro">
+					<h3 class="heading__tertiary--big">Older and cheaper or newer and better?</h3>
+					<p class="charts__text">Choosing a year of car is the decision to be made 
+						carefully. You may have chosen an older car which perfectly fits your budget but 
+						then You start having second thoughts: "Maybe I should add a few grands more and choose
+						the newer model. It will definitely last longer and it looks fancier". Here is the chart
+						that displays which years people tend to choose:
+					</p>
+				<div class="chart2__container">
+					<canvas id="chart2"></canvas>
+				</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__display">
+				<div class="footer__logo">
+					<span class="footer__logo1">Car</span><span class="text--highlighted ">ty</span>
+				</div>
+				<div class="mail">
+					<svg class="footer__icon">
+						<use xlink:href="./img/sprite.svg#icon-mail" />
+					</svg>
+						<span class="footer__text">info@cartydealership.com</span>
+				</div>
+				<div class="localization">
+					<svg class="footer__icon">
+						<use xlink:href="./img/sprite.svg#icon-marker" />
+					</svg>
+					<span class="footer__text">Brandenburgische Str. 86, Weissach (71554),  Germany</span>
+				</div>
+			</div>
+			<div class="copyright">Copyright 2021 by Carty | All rights reserved</div>
+		</footer>
+	</body>
+</html>
