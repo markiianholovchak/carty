@@ -20,10 +20,10 @@ learnMoreBtn.addEventListener("click", (e) => {
 
 // https://my.api.mockaroo.com/cars.json?key=93a4dee0
 
-const carsContainer = document.querySelector(".OursCar__cars");
+const carsContainer = document.querySelector(".carStock__cars");
 const loadCarsButton = document.querySelector("#loadCars");
-const chart1Container = document.querySelector(".chart1__container");
-const chart2Container = document.querySelector(".chart2__container");
+const chartsContainer = document.querySelector(".chart__container");
+// const chart2Container = document.querySelector(".chart2__container");
 
 const renderNineCars = (cars) => {
 	cars.forEach((car) => {
@@ -196,13 +196,13 @@ const setLoadingButton = (action, ...containers) => {
 };
 
 const fetchData = async () => {
-	setLoadingButton("add", carsContainer, chart1Container, chart2Container);
+	setLoadingButton("add", carsContainer, chartsContainer);
 	const response = await fetch(
 		"https://my.api.mockaroo.com/cars.json?key=93a4dee0"
 	);
 	const data = await response.json();
-	setLoadingButton("clear", carsContainer, chart1Container, chart2Container);
+	setLoadingButton("clear", carsContainer, chartsContainer);
 	renderCars(data);
 	renderCharts(data);
 };
-fetchData();
+// fetchData();

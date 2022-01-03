@@ -1,0 +1,261 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+body {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  /* 1rem == 10px */ }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg); } }
+
+.heading__primary, .heading__secondary, .heading__tertiary--big, .heading__tertiary--small {
+  color: #2b2d42;
+  font-family: "Montserrat"; }
+
+.heading__primary {
+  font-size: 5rem;
+  font-weight: 700; }
+
+.heading__secondary {
+  font-size: 3rem;
+  font-weight: 600; }
+
+.heading__tertiary--small {
+  font-size: 1.8rem;
+  font-weight: 600; }
+
+.heading__tertiary--big {
+  font-size: 2.3rem;
+  font-weight: 600; }
+
+.text--highlighted {
+  color: #60d394; }
+
+.btn {
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Catamaran";
+  font-weight: 600;
+  background-color: #60d394;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  display: inline-block;
+  margin: 2rem 0;
+  box-shadow: 0rem 1rem 1rem rgba(43, 45, 66, 0.2);
+  transition: all 0.4s ease;
+  border: none;
+  cursor: pointer; }
+  .btn:active {
+    transform: scale(0.85);
+    box-shadow: 0rem 0.5rem 1rem rgba(43, 45, 66, 0.3); }
+
+.loadingIcon {
+  height: 4rem;
+  width: 4rem;
+  grid-column: 2 / 3;
+  animation: rotate 1.5s linear infinite;
+  fill: #60d394;
+  margin-top: 5rem; }
+
+.logo {
+  display: flex;
+  flex-direction: column; }
+  .logo__name {
+    font-size: 5rem;
+    font-family: "Montserrat";
+    font-weight: bold; }
+    .logo__name--dark {
+      color: #2b2d42; }
+    .logo__name--light {
+      color: #ffffff; }
+  .logo__motto {
+    font-size: 2rem;
+    font-family: "Catamaran";
+    font-weight: 400;
+    color: rgba(43, 45, 66, 0.5); }
+
+.navbar__list {
+  display: flex;
+  list-style: none;
+  font-family: "Catamaran";
+  font-size: 2.5rem;
+  font-weight: 500; }
+
+.navbar__link {
+  transition: all 0.3s ease;
+  cursor: pointer; }
+  .navbar__link:hover {
+    color: #60d394; }
+  .navbar__link:not(:last-child) {
+    margin-right: 3rem; }
+
+.strongSide {
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .strongSide__icon {
+    width: 7rem;
+    height: 7rem;
+    fill: #60d394;
+    margin-bottom: 0.5rem; }
+  .strongSide__text {
+    font-size: 1.6rem;
+    font-family: "Catamaran";
+    color: rgba(43, 45, 66, 0.5);
+    margin-top: 0.5rem;
+    text-align: center; }
+
+.car {
+  width: 38rem;
+  height: 15.2rem;
+  display: flex;
+  background: #ffffff;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25); }
+  .car__left {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-family: "Montserrat";
+    font-weight: bold;
+    text-align: center;
+    width: 40%;
+    background: #60d394;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .car__right {
+    width: 60%;
+    display: flex;
+    align-items: center; }
+  .car__description {
+    color: #2b2d42;
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    list-style: none;
+    margin-left: 1.5rem; }
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .chart__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .chart__text {
+    width: 70%;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #2b2d42;
+    font-family: "Catamaran";
+    margin: 1.5rem 0 2.5rem 0; }
+  .chart__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .chart__container--big {
+      height: 45rem;
+      margin-bottom: 5rem; }
+    .chart__container--small {
+      height: 35rem; }
+    .chart__container canvas {
+      height: 100%;
+      width: 100%; }
+
+.header {
+  height: 100vh; }
+  .header__top {
+    margin: 2.5rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .header__bottom {
+    margin: 0rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center; }
+    .header__bottom--right img {
+      width: 100%; }
+
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f7f9;
+  padding: 10rem; }
+  .aboutUs__text {
+    width: 70%;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #2b2d42;
+    font-family: "Catamaran";
+    margin: 2.5rem; }
+  .aboutUs__strongSides {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5rem; }
+
+.carStock {
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .carStock__cars {
+    padding: 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 5rem; }
+
+.charts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 5rem 0; }
+  .charts__text {
+    width: 70%;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #2b2d42;
+    font-family: "Catamaran";
+    margin: 2.5rem; }
+
+.footer {
+  background: #2b2d42;
+  padding: 1.5rem 0; }
+  .footer__details {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 5rem; }
+  .footer__text {
+    font-family: "Catamaran";
+    font-size: 1.5rem;
+    color: #f8f7f9; }
+  .footer__mail, .footer__localization {
+    display: flex;
+    align-items: center; }
+  .footer__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: #60d394;
+    margin-right: 0.7rem; }
+  .footer__copyright {
+    font-family: "Catamaran";
+    font-size: 1.3rem;
+    color: #ffffffb3;
+    margin-top: 0.9rem;
+    text-align: center; }

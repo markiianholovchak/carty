@@ -1,0 +1,21 @@
+.logo {
+	display: flex;
+	flex-direction: column;
+	&__name {
+		font-size: 5rem;
+		font-family: $font-main;
+		font-weight: bold;
+		&--dark {
+			color: $color-dark;
+		}
+		&--light {
+			color: $color-white;
+		}
+	}
+	&__motto {
+		font-size: 2rem;
+		font-family: $font-secondary;
+		font-weight: 400;
+		color: $color-dark-light;
+	}
+}

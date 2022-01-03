@@ -1,0 +1,37 @@
+.car {
+	width: 38rem;
+	height: 15.2rem;
+	display: flex;
+
+	background: #ffffff;
+	box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+	&__left {
+		color: $color-white;
+		font-size: 2.2rem;
+		font-family: $font-main;
+		font-weight: bold;
+		text-align: center;
+
+		width: 40%;
+		background: $color-primary;
+		padding: 1.5rem;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__right {
+		width: 60%;
+		display: flex;
+		align-items: center;
+	}
+	&__description {
+		color: $color-dark;
+		font-size: 14px;
+		font-family: $font-main;
+		font-weight: 500;
+		list-style: none;
+
+		margin-left: 1.5rem;
+	}
+}

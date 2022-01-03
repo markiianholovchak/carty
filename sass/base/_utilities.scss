@@ -1,0 +1,61 @@
+.heading {
+	&__primary,
+	&__secondary,
+	&__tertiary--big,
+	&__tertiary--small {
+		color: $color-dark;
+		font-family: $font-main;
+	}
+	&__primary {
+		font-size: 5rem;
+		font-weight: 700;
+	}
+	&__secondary {
+		font-size: 3rem;
+		font-weight: 600;
+	}
+	&__tertiary {
+		&--small {
+			font-size: 1.8rem;
+			font-weight: 600;
+		}
+		&--big {
+			font-size: 2.3rem;
+			font-weight: 600;
+		}
+	}
+}
+
+.text--highlighted {
+	color: $color-primary;
+}
+.btn {
+	font-size: 2.5rem;
+	text-decoration: none;
+	color: $color-white;
+	font-family: $font-secondary;
+	font-weight: 600;
+	background-color: $color-primary;
+	border-radius: 5px;
+	padding: 0.5rem 1.5rem;
+	display: inline-block;
+	margin: 2rem 0;
+	box-shadow: 0rem 1rem 1rem rgba(43, 45, 66, 0.2);
+	transition: all 0.4s ease;
+	border: none;
+	cursor: pointer;
+
+	&:active {
+		transform: scale(0.85);
+		box-shadow: 0rem 0.5rem 1rem rgba(43, 45, 66, 0.3);
+	}
+}
+
+.loadingIcon {
+	height: 4rem;
+	width: 4rem;
+	grid-column: 2 / 3;
+	animation: rotate 1.5s linear infinite;
+	fill: $color-primary;
+	margin-top: 5rem;
+}

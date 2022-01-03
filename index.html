@@ -14,7 +14,7 @@
 		<link rel="icon" type="image/png" href="./img/favicon.png" />
 
 		<title>Carty | Best car dealership in Europe</title>
-		<link rel="stylesheet" href="./styles.css" />
+		<link rel="stylesheet" href="./css/style.css" />
 		<script defer src="./index.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
 		
@@ -24,7 +24,7 @@
 			<!-- BEM - sposob pisania klas w web devie. B - block, E - element, M - modofier -->
 			<div class="header__top">
 				<div class="logo">
-					<span class="logo__name"
+					<span class="logo__name logo__name--dark"
 						>Car<span class="text--highlighted">ty</span></span
 					>
 					<span class="logo__motto">Come,buy,drive!</span>
@@ -32,7 +32,7 @@
 				<nav class="navbar">
 					<ul class="navbar__list">
 						<li class="navbar__link" data-goForth="123" data-goTo="aboutUs">About</li>
-						<li class="navbar__link" data-goTo="OursCar">Explore</li>
+						<li class="navbar__link" data-goTo="carStock">Explore</li>
 						<li class="navbar__link" data-goTo="footer">Contact</li>
 						
 					</ul>
@@ -100,9 +100,9 @@
 					</div>					
 			</section>
 			
-			<section class="OursCar">
+			<section class="carStock">
 				<h2 class="heading__secondary">Take a look at some of our cars</h2>
-				<div class="OursCar__cars">
+				<div class="carStock__cars">
 					<!-- <div class="car">
 						<div class="car__left">Toyota Avensis</div>
 						<div class="car__right">
@@ -120,57 +120,64 @@
 				<button class="btn" id="loadCars">Load More</button>
 			</section>
 			<section class="charts">
-				<div class="dreamCar">
 					<h2 class="heading__secondary">Choose the car of your dream</h1>
 					<p class="charts__text">What car to choose? -It may be one of the hardest 
 						questions in Your life. You want a cheap car that doesn't require a 
 						fortune on petrol but at the same time it must be reliable and look nice.
 						Our consultants will help You find the very car you seek
 					</p>
+				<div class="chart">
+					<div class="chart__description">
+						<h3 class="heading__tertiary--big">Audi, BMW or maybe Toyota?</h3>
+						<p class="chart__text">According to scientifical surveys, make of the car plays
+						an important role while choosing your new steel horse. The next chart is based on our 
+						last month's sales of most popular car makes
+						</p>
+					</div>
+					<div class="chart__container chart__container--big">
+						<canvas id="chart1"></canvas>
+					</div>
 				</div>
-				<div class="chart1__intro">
-					<h3 class="heading__tertiary--big">Audi, BMW or maybe Toyota?</h3>
-					<p class="charts__text">According to scientifical surveys, make of the car plays
-					an important role while choosing your new steel horse. The next chart is based on our 
-					last month's sales of most popular car makes
-					</p>
+				<div class="chart">
+					<div class="chart__description">
+						<h3 class="heading__tertiary--big">Older and cheaper or newer and better?</h3>
+						<p class="chart__text">Choosing a year of car is the decision to be made 
+							carefully. You may have chosen an older car which perfectly fits your budget but 
+							then You start having second thoughts: "Maybe I should add a few grands more and choose
+							the newer model. It will definitely last longer and it looks fancier". Here is the chart
+							that displays which years people tend to choose:
+						</p>
+					<div class="chart__container chart__container--small">
+						<canvas id="chart2"></canvas>
+					</div>
 				</div>
-				<div class="chart1__container">
-					<canvas id="chart1"></canvas>
-				</div>
-				<div class="chart2__intro">
-					<h3 class="heading__tertiary--big">Older and cheaper or newer and better?</h3>
-					<p class="charts__text">Choosing a year of car is the decision to be made 
-						carefully. You may have chosen an older car which perfectly fits your budget but 
-						then You start having second thoughts: "Maybe I should add a few grands more and choose
-						the newer model. It will definitely last longer and it looks fancier". Here is the chart
-						that displays which years people tend to choose:
-					</p>
-				<div class="chart2__container">
-					<canvas id="chart2"></canvas>
-				</div>
+				
 				</div>
 			</section>
 		</main>
 		<footer class="footer">
-			<div class="footer__display">
+			<div class="footer__details">
 				<div class="footer__logo">
-					<span class="footer__logo1">Car</span><span class="text--highlighted ">ty</span>
+					<div class="logo">
+						<span class="logo__name logo__name--light"
+							>Car<span class="text--highlighted">ty</span></span
+						>
+					</div>
 				</div>
-				<div class="mail">
+				<div class="footer__mail">
 					<svg class="footer__icon">
 						<use xlink:href="./img/sprite.svg#icon-mail" />
 					</svg>
 						<span class="footer__text">info@cartydealership.com</span>
 				</div>
-				<div class="localization">
+				<div class="footer__localization">
 					<svg class="footer__icon">
 						<use xlink:href="./img/sprite.svg#icon-marker" />
 					</svg>
 					<span class="footer__text">Brandenburgische Str. 86, Weissach (71554),  Germany</span>
 				</div>
 			</div>
-			<div class="copyright">Copyright 2021 by Carty | All rights reserved</div>
+			<div class="footer__copyright">Copyright 2021 by Carty | All rights reserved</div>
 		</footer>
 	</body>
 </html>
