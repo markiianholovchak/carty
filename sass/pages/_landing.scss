@@ -1,10 +1,14 @@
 .header {
-	height: 100vh;
+	min-height: 100vh;
 	&__top {
 		margin: 2.5rem 5rem;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@media only screen and (max-width: 28.125em) {
+			flex-direction: column;
+			margin: 2.5rem 0;
+		}
 	}
 	&__bottom {
 		margin: 0rem 5rem;
@@ -15,7 +19,26 @@
 		&--right {
 			img {
 				width: 100%;
+				height: 100%;
 			}
+			@media only screen and (max-width: 56.25em) {
+				height: 35rem;
+			}
+		}
+		&--left {
+			@media only screen and (max-width: 56.25em) {
+				text-align: center;
+				padding: 5rem 0;
+
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+		@media only screen and (max-width: 56.25em) {
+			grid-template-columns: 1fr;
+			padding-bottom: 5rem;
+			margin: 0 1.5rem;
 		}
 	}
 }
@@ -26,6 +49,9 @@
 	align-items: center;
 	background: $color-grey-light;
 	padding: 10rem;
+	@media only screen and (max-width: 28.125em) {
+		padding: 10rem 1.5rem;
+	}
 	&__text {
 		width: 70%;
 		text-align: center;
@@ -48,6 +74,9 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	@media only screen and (max-width: 28.125em) {
+		text-align: center;
+	}
 	&__cars {
 		padding: 5rem 0;
 		display: grid;

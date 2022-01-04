@@ -2,6 +2,9 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	@media only screen and (max-width: 28.125em) {
+		text-align: center;
+	}
 	&__description {
 		display: flex;
 		flex-direction: column;
