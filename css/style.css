@@ -12,6 +12,10 @@ html {
   font-size: 62.5%;
   /* 1rem == 10px */ }
 
+::selection {
+  color: #ffffff;
+  background: #60d394; }
+
 @keyframes rotate {
   0% {
     transform: rotate(360deg); } }
@@ -259,3 +263,33 @@ html {
     color: #ffffffb3;
     margin-top: 0.9rem;
     text-align: center; }
+
+.contact {
+  background-color: #f8f7f9;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat"; }
+    .contact__form label {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #2b2d42;
+      margin: 1.5rem 0 0.5rem 0; }
+      .contact__form label:first-child {
+        margin-top: 4rem; }
+    .contact__form textarea {
+      height: 15rem;
+      resize: none; }
+  .contact__input {
+    width: 30rem;
+    height: 4rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+    border: none;
+    font-family: "Catamaran"; }
+    .contact__input:focus {
+      outline-color: #60d394; }
