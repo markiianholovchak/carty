@@ -197,10 +197,22 @@ html {
     flex-direction: column;
     align-items: center; }
     .chart__container--big {
-      height: 45rem;
+      width: 40%;
       margin-bottom: 5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .chart__container--big {
+          width: 60%; } }
+      @media only screen and (max-width: 28.125em) {
+        .chart__container--big {
+          width: 70%; } }
     .chart__container--small {
-      height: 35rem; }
+      width: 40%; }
+      @media only screen and (max-width: 56.25em) {
+        .chart__container--small {
+          width: 70%; } }
+      @media only screen and (max-width: 28.125em) {
+        .chart__container--small {
+          width: 85%; } }
     .chart__container canvas {
       height: 100%;
       width: 100%; }
@@ -264,7 +276,7 @@ html {
     margin-top: 5rem; }
 
 .carStock {
-  padding: 10rem 0;
+  padding: 10rem 5rem;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -272,9 +284,11 @@ html {
     .carStock {
       text-align: center; } }
   .carStock__cars {
+    width: 100%;
     padding: 5rem 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
     grid-column-gap: 2rem;
     grid-row-gap: 5rem; }
 

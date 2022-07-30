@@ -70,7 +70,7 @@
 }
 
 .carStock {
-	padding: 10rem 0;
+	padding: 10rem 5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -78,9 +78,11 @@
 		text-align: center;
 	}
 	&__cars {
+		width: 100%;
 		padding: 5rem 0;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		justify-items: center;
+		grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
 		grid-column-gap: 2rem;
 		grid-row-gap: 5rem;
 	}
