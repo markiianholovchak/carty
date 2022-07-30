@@ -1,5 +1,39 @@
-// Adding navbar linking functionality
+// Setting current year to copyright
+document.querySelector(".footer__year").textContent = new Date().getFullYear();
 
+// Simbple form validatiom
+document.querySelector("form").addEventListener("submit", (e) => {
+	e.preventDefault();
+	// Clear errors
+	const errors = {
+		email: "",
+		name: "",
+		question: "",
+	};
+	const formValues = Object.values(e.target).reduce((acc, el) => {
+		if (el.name) {
+			acc[el.name] = el.value;
+		}
+		return acc;
+	}, {});
+	if (!formValues.email) {
+		errors.email = "*Email is required";
+	}
+	if (!formValues.name) {
+		errors.name = "*Name is required";
+	}
+	if (!formValues.question) {
+		errors.question = "*Please, write your question";
+	}
+	if (errors) {
+		Object.keys(errors).forEach((key) => {
+			document.querySelector(`.contact__errors--${key}`).textContent =
+				errors[key];
+		});
+	}
+});
+
+// Adding navbar linking functionality
 const navbar = document.querySelector(".navbar");
 navbar.addEventListener("click", (evt) => {
 	if (!evt.target.matches(".navbar__link")) return;
@@ -205,4 +239,4 @@ const fetchData = async () => {
 	renderCars(data);
 	renderCharts(data);
 };
-// fetchData();
+fetchData();

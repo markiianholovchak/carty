@@ -159,10 +159,13 @@
 				<form class="contact__form">
 					<label for="email">Email</label>
 					<input type="email" name="email" placeholder="info@cartydealership.com" class="contact__input">
+					<span class="contact__errors contact__errors--email"></span>
 					<label for="name">Name</label>
 					<input type="text" name="name" placeholder="James" class="contact__input">
+					<span class="contact__errors contact__errors--name"></span>
 					<label for="question">Question</label>
 					<textarea name="question" class="contact__input" ></textarea>
+					<span class="contact__errors contact__errors--question"></span>
 					<button class="btn">Submit</button>
 				</form>
 			</section>
@@ -189,7 +192,7 @@
 					<span class="footer__text">Brandenburgische Str. 86, Weissach (71554),  Germany</span>
 				</div>
 			</div>
-			<div class="footer__copyright">Copyright 2021 by Carty | All rights reserved</div>
+			<div class="footer__copyright">Copyright <span class="footer__year"></span> by Carty | All rights reserved</div>
 		</footer>
 	</body>
 </html>
