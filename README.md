@@ -6,6 +6,10 @@ Landing page for a car dealership company, created as an assignment at college
 
 HTML, SASS, Vanilla JS
 
+Car data is genereted by https://mockaroo.com/ API generator
+
+Charts are built using Chart.js library
+
 ## Live demo:
 
-carty.netlify.app
+https://carty.netlify.app/
